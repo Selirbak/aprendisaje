@@ -13,30 +13,47 @@ public class principal {
         operaciones operaciones = new operaciones();
         int numero1 = ingreseUnNumero();
         int numero2 = ingreseUnNumero();
-        int resultado = 0;
+
 
         //CICLO FOR
-        System.out.println(" ******* SE INICIA CICLO FOR *******");
-        for (int i = 0; i < numero2; i++) {
-            resultado = operaciones.suma(numero1, resultado);
-            System.out.println(" el valor de la vuelta " + i + " es: " + resultado);
-        }
-        System.out.println("el resultado de la suma de numero " + numero1 + " por numero de veces de numero " + numero2 + " es " + resultado);
+
+        bucles claseBucles = new bucles();
+        claseBucles.metodoFor(numero1, numero2);
 
         //CICLO WHILE
-        System.out.println(" ******* SE INICIA CICLO WHILE *******");
+        claseBucles.metodoWhile(numero1 , numero2);
+
+
+
+
+        /*System.out.println(" ******* SE INICIA CICLO WHILE *******");
         resultado = 0;
         int i = 0;
-        while (i < numero2 )  {
+        while (i < numero2) {
             resultado = operaciones.suma(numero1, resultado);
-            System.out.println(" el valor de la vuelta " + i+ " es: " + resultado);
-            i = i+1;
-        }
-
+            System.out.println(" el valor de la vuelta " + i + " es: " + resultado);
+            i = i + 1;
+        }*/
 
 
         //CICLO DO - WHILE
+
+        claseBucles.methodoDoWhile(numero1 , numero2);
+
+
+/*
+
+
         System.out.println(" ******* SE INICIA CICLO DO - WHILE *******");
+        int i = 0;
+        resultado = 0;
+        do {
+            resultado = operaciones.suma(numero1, resultado);
+
+            System.out.println("el valor de la vuelta " + i + " es " + resultado);
+            i = i + 1;
+        } while (i < numero2);
+        */
 
 
     }
