@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class principal {
+public class Principal {
 
     public static void main(String[] args) {
         /*TODO ENUNCIADO
@@ -10,14 +10,39 @@ public class principal {
         */
 
         //DESARROLLO
-        operaciones operaciones = new operaciones();
+        Operaciones operaciones = new Operaciones();
         int numero1 = ingreseUnNumero();
-        int numero2 = ingreseUnNumero();
 
+
+        //Condicional IF
+
+        if (numero1>=2){
+
+            System.out.println("el numero ingresado es correcto");
+        } else {
+            System.out.println("el numero ingresado es erroneo");
+
+        }
+
+
+        //Condicional SWITCH
+        switch (numero1){
+            case 0:
+            case -1:
+                System.out.println("el numero ingresado es erroneo " +numero1);
+                break;
+            case 5:
+                System.out.println("el numero ingresado es correcto");
+                break;
+            default:
+                System.out.println("el numero ingresado es erroneo");
+                break;
+        }
+        int numero2 = ingreseUnNumero();
 
         //CICLO FOR
 
-        bucles claseBucles = new bucles();
+        Bucles claseBucles = new Bucles();
         claseBucles.metodoFor(numero1, numero2);
 
         //CICLO WHILE
@@ -60,7 +85,7 @@ public class principal {
 
     public static void ejemploOperaciones() {
         try {
-            operaciones operaciones = new operaciones();
+            Operaciones operaciones = new Operaciones();
 
             int numeroEntero1 = ingreseUnNumero();
 
@@ -76,7 +101,7 @@ public class principal {
 
             System.out.println("El Resultado de multiplicar entre ambos es: " + resultadoMultiplicacion);
 
-            double resultadoDiv = operaciones.divis(resultadoSuma, numeroEntero3);
+            double resultadoDiv = operaciones.dividir(resultadoSuma, numeroEntero3);
 
             System.out.println("Si dividimos este con el con el ultimo numero ingresado será: " + resultadoDiv);
 

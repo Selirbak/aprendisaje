@@ -1,4 +1,4 @@
-public class operaciones {
+public class Operaciones {
 
 
     public int suma(int numero1, int numero2) {
@@ -17,7 +17,7 @@ public class operaciones {
 
     }
 
-    public double divis(int numero1, int numero2) {
+    public double dividir(int numero1, int numero2) {
         double division = numero1 / numero2;
         return division;
 
